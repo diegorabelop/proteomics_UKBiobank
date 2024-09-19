@@ -5,18 +5,23 @@ date: "2024-09-19"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-dasfafddafdafda
+```{r}
+library(readr)
+library(renv)
+library(ggplot2)
+library(dplyr)
+#renv::snapshot()
 ```
 
 ## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+```{r}
+## Download proteomics data that it's on my cloud
+system('dx download project-GqPQq38JxQbFJKpFGZGZg6fV:/Proteomics/proteomics_data_Depression.csv')
+proteomics_depression <- read_csv("proteomics_data_Depression.csv")
+#View(proteomics_data_Depression)
 ```
 
 ## Including Plots
